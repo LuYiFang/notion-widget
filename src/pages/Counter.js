@@ -8,15 +8,15 @@ import { IconButton, Popover, Typography } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import Grid from "@mui/material/Grid2";
 
-const width = 350;
-const height = 200;
+const width = 340;
+const height = 190;
 const numberCardStyle = {
   fontSize: 105,
   borderColor: "gray",
   borderStyle: "solid",
   borderWidth: 1,
   textAlign: "center",
-  backgroundColor: "#8de1d1",
+  backgroundColor: "#D5F9E3",
   lineHeight: 1,
 };
 
@@ -70,7 +70,7 @@ const Counter = () => {
           width: width,
           height: height,
           position: "relative",
-          backgroundColor: "rgb(48, 52, 55)",
+          backgroundColor: "#191919",
           fontFamily: '"Funnel Sans", sans-serif',
         }}
         rowSpacing={1}
