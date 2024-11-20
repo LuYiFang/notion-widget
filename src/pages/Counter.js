@@ -58,7 +58,7 @@ const Counter = () => {
           height: height,
           position: "relative",
           backgroundColor: "#191919",
-          fontFamily: '"Funnel Sans", sans-serif',
+          fontFamily: '"Rubik Distressed", sans-serif',
         }}
         rowSpacing={1}
         px={1}
