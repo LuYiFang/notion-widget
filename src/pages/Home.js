@@ -21,8 +21,8 @@ function Home() {
   useEffect(() => {
     setCounterUrl(
       `${window.location.href}counter?startDate=${startDate.format(
-        "YYYYMMDD"
-      )}`
+        "YYYYMMDD",
+      )}`,
     );
   }, [startDate]);
 

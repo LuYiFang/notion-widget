@@ -22,7 +22,7 @@ const Counter = () => {
     const date = new URLSearchParams(window.location.search).get("startDate");
     if (!date) return moment();
     return date;
-  }, [window.location.search]);
+  }, []);
 
   const { hundreds, tens, units } = useMemo(() => {
     return {
@@ -42,8 +42,8 @@ const Counter = () => {
     const nextMidnight = now.clone().endOf("day").add(1, "second");
 
     const timer = setTimeout(
-      setDays(calculateDaysPasses),
-      nextMidnight.diff(now)
+      setDays(calculateDaysPasses()),
+      nextMidnight.diff(now),
     );
 
     return () => clearTimeout(timer);
@@ -54,8 +54,8 @@ const Counter = () => {
       <Grid
         container
         sx={{
-          width: width,
-          height: height,
+          minWidth: width,
+          maxHeight: height,
           position: "relative",
           backgroundColor: "#191919",
           fontFamily: '"Rubik Distressed", sans-serif',
