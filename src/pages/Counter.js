@@ -41,8 +41,7 @@ const Counter = () => {
     const now = moment();
     const nextMidnight = now.clone().endOf("day").add(1, "second");
 
-    const timer = setTimeout(
-      setDays(calculateDaysPasses()),
+    const timer = setTimeout(() => setDays(calculateDaysPasses()),
       nextMidnight.diff(now),
     );
 
