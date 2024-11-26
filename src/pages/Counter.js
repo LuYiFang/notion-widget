@@ -38,12 +38,16 @@ const Counter = () => {
   };
 
   useEffect(() => {
+    setDays(calculateDaysPasses());
+  }, [startDate]);
+
+  useEffect(() => {
     const now = moment();
     const nextMidnight = now.clone().endOf("day").add(1, "second");
 
-    const timer = setTimeout(() => setDays(calculateDaysPasses()),
-      nextMidnight.diff(now),
-    );
+    const timer = setTimeout(() => {
+      setDays(calculateDaysPasses());
+    }, nextMidnight.diff(now));
 
     return () => clearTimeout(timer);
   }, [days, startDate]);
